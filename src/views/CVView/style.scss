@@ -1,0 +1,57 @@
+$main-gap: 20px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
+}
+
+ul {
+  margin-bottom: $main-gap;
+  li {
+    list-style-type: none;
+  }
+}
+
+h1 {
+  margin: $main-gap 0;
+}
+
+h2 {
+    margin-bottom: $main-gap;
+}
+
+.cv-main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header header" "personal details";
+  grid-template-columns: 250px 1fr;
+ }
+
+.cv-header {
+  grid-area: header;
+  text-align: center;
+}
+
+.cv-personal {
+  grid-area: personal;
+  padding: $main-gap;
+  background: #eee;
+
+  .cv-photo {
+    width: 100%;
+    margin: $main-gap 0;
+    border-radius: 50%;
+  }
+}
+
+.cv-details {
+  grid-area: details;
+  padding: $main-gap;
+  background: #fafafa;
+  text-align: center;
+}
